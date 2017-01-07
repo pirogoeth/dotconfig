@@ -1,0 +1,11 @@
+---
+- name: create i3 configuration directory
+  file:
+    path="{{ lookup('env', 'HOME') }}/.config/i3"
+    recurse=yes
+    state=directory
+
+- name: configure i3 for local user
+  template:
+    src=config.j2
+    dest="{{ lookup('env', 'HOME') }}/.config/i3/config"

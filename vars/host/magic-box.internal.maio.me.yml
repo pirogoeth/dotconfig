@@ -1,0 +1,27 @@
+# vim: set syntax=yaml ai ts=2 sts=2 sw=2:
+
+---
+
+X11:
+  xft:
+    dpi: 160
+
+pulseaudio:
+  device: 1
+
+xkb:
+  map_toggle: 'grp:sclk_toggle'
+  layouts: 'us,ru'
+  variants: ',phoenetic_winkeys'
+
+system:
+  terminal_emulator: 'terminology'
+  file_explorer: '/usr/bin/thunar'
+  display:
+    primary: eDP1
+
+i3:
+  workspace_count: 10
+  bar:
+    font: 'pango:Iosevka Light 12'
+    padding: '8px'

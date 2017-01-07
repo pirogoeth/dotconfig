@@ -1,0 +1,6 @@
+---
+
+- debug: msg="trying to load host vars for {{ ansible_fqdn }}"
+
+- include_vars:
+    file='../vars/host/{{ ansible_fqdn }}.yml'

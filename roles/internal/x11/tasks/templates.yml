@@ -1,0 +1,6 @@
+---
+- name: create Xresources file
+  template:
+    src=xresources.j2
+    dest="{{ lookup('env', 'HOME') }}/.Xresources"
+    validate="/usr/bin/env xrdb -merge %s"

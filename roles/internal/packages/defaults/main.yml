@@ -1,0 +1,4 @@
+---
+archlinux:
+  aur:
+    package_dir: /tmp

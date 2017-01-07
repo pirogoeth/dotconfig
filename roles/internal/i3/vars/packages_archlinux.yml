@@ -1,0 +1,11 @@
+---
+packages:
+  - name: i3-gaps-next-git
+    aur: true
+  - name: i3pystatus-git
+    aur: true
+  - name: i3lock
+  - name: i3lock-wrapper
+    aur: true
+  - name: compton
+  - name: nitrogen

@@ -1,0 +1,11 @@
+---
+- block:
+  - name: debian | install packages
+    apt:
+      name="{{ item.name }}"
+      default_release="{{ item.release | default('') }}"
+      state="{{ item.state | default('latest') }}"
+      force="{{ item.force | default('no') }}"
+      dpkg_options="{{ item.dpkg_opt | default('force-confdef,force-confold') }}"
+    with_items: "{{ packages }}"
+  when: "{{ packages is defined }}"

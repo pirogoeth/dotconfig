@@ -1,0 +1,31 @@
+---
+packages:
+  # audio / video and web
+  - name: chromium
+  - name: mpv
+  - name: pavucontrol
+  - name: playerctl
+    aur: true
+  - name: vivaldi
+  # editors
+  - name: neovim
+  - name: python-neovim
+  - name: python2-neovim
+  - name: atom-editor-bin
+    aur: true
+  # security
+  - name: pcsc-tools
+  - name: pcsclite
+  # utilities
+  - name: blueshift
+    aur: true
+  - name: desktop-file-utils
+  - name: dex
+  - name: enpass-bin
+    aur: true
+  - name: telegram-desktop-bin
+    aur: true
+  - name: the_silver_searcher
+  - name: tmux-git
+    aur: true
+  - name: vagrant

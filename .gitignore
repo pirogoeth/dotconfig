@@ -1,0 +1,5 @@
+## Python-created files
+*.pyc
+
+## Ansible-created files
+*.retry
