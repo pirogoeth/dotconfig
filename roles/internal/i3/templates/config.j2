@@ -180,24 +180,24 @@ bindsym $mod+a focus parent
 bindsym $mod+y fullscreen disable; floating enable; resize set 400 300; sticky enable; move window to position 1280 20
 
 # override workspace names
-{% for i in range(i3.workspace_count) %}
+{% for i in range(1, i3.workspace_count) %}
 set $WS{{ i }} {{ i }}:
 {% endfor %}
 
 # switch to workspace
-{% for i in range(i3.workspace_count) %}
+{% for i in range(1, i3.workspace_count) %}
 bindsym $mod+{{ i }} workspace $WS{{ i }}
 {% endfor %}
 
 bindsym $mod+Tab workspace back_and_forth
 
 # move focused container to workspace
-{% for i in range(i3.workspace_count) %}
+{% for i in range(1, i3.workspace_count) %}
 bindsym $mod+Shift+{{ i }} move container to workspace $WS{{ i }}
 {% endfor %}
 
 # Mapping workspaces across multiple monitors
-{% for i in range(i3.workspace_count) %}
+{% for i in range(1, i3.workspace_count) %}
 workspace $WS{{ i }} output {{ system.display.primary }}
 {% endfor %}
 
