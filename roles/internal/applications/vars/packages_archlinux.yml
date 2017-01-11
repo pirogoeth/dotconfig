@@ -24,7 +24,7 @@ packages:
   - name: dex
   - name: enpass-bin
     aur: true
-  - name: telegram-desktop-bin
+  - name: telegram-desktop-bin-dev
     aur: true
   - name: the_silver_searcher
   - name: tmux-git
