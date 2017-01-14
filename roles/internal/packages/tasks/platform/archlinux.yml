@@ -5,6 +5,7 @@
       name="{{ item.name }}"
       state="{{ item.state | default('latest') }}"
       force="{{ item.force | default('no') }}"
+    become: true
     when: "{{ not item.aur | default(False) }}"
     with_items: "{{ packages }}"
 
