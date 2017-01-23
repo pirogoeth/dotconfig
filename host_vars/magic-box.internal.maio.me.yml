@@ -7,7 +7,7 @@ X11:
     dpi: 160
 
 pulseaudio:
-  device: 1
+  device: 0
 
 xkb:
   map_toggle: 'grp:sclk_toggle'
