@@ -5,7 +5,7 @@
 # dotconfig-util.sh - bash utilities for managing dotconfig
 #
 
-function reapply-dotconfig () {
+function reapply_dotconfig () {
     args=${*}
 
     if [ ! -d "${HOME}/.dotconfig" ] ; then
@@ -18,7 +18,7 @@ function reapply-dotconfig () {
     popd 2>&1 1>/dev/null
 }
 
-function modify-dotconfig-role () {
+function modify_dotconfig_role () {
     role=$1;    shift
     args=${*}
 

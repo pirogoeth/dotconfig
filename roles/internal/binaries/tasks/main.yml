@@ -1,0 +1,9 @@
+---
+- include_vars: "{{ packages_file }}"
+  when: "{{ packages_file is defined }}"
+
+- include: platform/debian.yml
+  when: "{{ ansible_os_family == 'Debian' }}"
+
+- include: platform/archlinux.yml
+  when: "{{ ansible_os_family == 'Archlinux' }}"
