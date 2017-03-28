@@ -6,12 +6,14 @@
     checksum="{{ binary.hash }}"
     dest="{{ binary.path }}"
     force=yes
+    mode=0755
   register: cur_bin
 
 - name: "extract archive | {{ cur_bin.dest }}"
   unarchive:
     src="{{ cur_bin.dest }}"
     dest="{{ binary.path | dirname }}"
+    mode=0755
   register: xtr_bin
   when: "{{ cur_bin | success and binary.extract | default(False) }}"
 
