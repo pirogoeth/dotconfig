@@ -8,15 +8,18 @@ packages:
     aur: true
   - name: vivaldi
     aur: true
+
   # editors
   - name: neovim
   - name: python-neovim
   - name: python2-neovim
   - name: atom-editor-bin
     aur: true
+
   # security
   - name: pcsc-tools
   - name: pcsclite
+
   # utilities
   - name: blueshift
     aur: true
@@ -30,3 +33,4 @@ packages:
   - name: tmux-git
     aur: true
   - name: vagrant
+  - name: zeal
