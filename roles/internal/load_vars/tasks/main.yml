@@ -1,0 +1,11 @@
+---
+
+- debug: msg="trying to load host vars for {{ ansible_fqdn | quote }}"
+
+- include_vars:
+    file="host_vars/{{ ansible_fqdn }}.yml"
+
+- debug: msg="trying to load group vars for {{ ansible_system | lower | quote }}"
+
+- include_vars:
+    file="group_vars/{{ ansible_system | lower }}.yml"

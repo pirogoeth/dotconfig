@@ -2,7 +2,8 @@
 - hosts: '*'
   tags: dotconfig-setup
   roles:
-    - { role: load_host_vars, tags: ['config'] }
+    - { role: load_vars, tags: ['_init'] }
     - { role: i3, tags: ['config', 'i3', 'wm'] }
     - { role: x11, tags: ['config', 'x11', 'ws'] }
     - { role: applications, tags: ['applications'] }
+    - { role: binaries, tags: ['binaries'] }

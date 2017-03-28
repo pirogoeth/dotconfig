@@ -1,0 +1,22 @@
+---
+
+- name: "install binary | {{ binary.path }}"
+  get_url:
+    url="{{ binary.link }}"
+    checksum="{{ binary.hash }}"
+    dest="{{ binary.path }}"
+    force=yes
+  register: cur_bin
+
+- name: "extract archive | {{ cur_bin.dest }}"
+  unarchive:
+    src="{{ cur_bin.dest }}"
+    dest="{{ binary.path | dirname }}"
+  register: xtr_bin
+  when: "{{ cur_bin | success and binary.extract | default(False) }}"
+
+- name: "remove archive | {{ cur_bin.dest }}"
+  file:
+    path="{{ cur_bin.dest }}"
+    state=absent
+  when: "{{ xtr_bin | success and binary.extract | default(False) }}"

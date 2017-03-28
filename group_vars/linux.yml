@@ -8,13 +8,13 @@ binaries:
     hash: sha512:e17afc6fed1ff92af2df9d8cd94a0e38792de9f1dfc6dc0871ee27613ce9a409d2efaf05197f27839390e13662491aface985f11cf16c1d97b4628d01f6cd0bb
 
   - link: https://github.com/grammarly/rocker/releases/download/1.3.0/rocker_linux_amd64.tar.gz
-    path: ~/.bin/
+    path: ~/.bin/rocker.tgz
     extract: true
-    hash: sha512:075bfa6f40a6713b0b7ede0b5785e22edc51ec6246bf8e3880ac7e842a67f265929580e279bad433c8d7adf138d4a2c4e6ec69498ffbf845f9be63039e932d94
+    hash: sha512:9ae5a091eb815438370c1ab18be478e60484375aae9ed67a84f8dd8adf0a3690e34d80d154bcc729c48b8b70b6528975bd18436b687282c3845ee29d7998a884
 
   - link: https://github.com/docker/compose/releases/download/1.11.2/docker-compose-Linux-x86_64
     path: ~/.bin/docker-compose
-    hash: sha512:8262224c77c1fcee73c8cdb07441c85dd346f16c480b2d73ed9348dfafa7a528196b96aef4259a560f433399fe2a47d358512209ad1b1632cfa59a2f3dc9dc28
+    hash: sha512:37df59f30a8c0a376bed069b7eec35fb1267f1eea245310198fe61c4f3bce44796e1d4dfd50d504fd81906d63a2736d3b9f96c21ca3d3268905254f60c930e26
 
   - link: https://storage.googleapis.com/minikube/releases/v0.17.1/minikube-linux-amd64
     path: ~/.bin/minikube
