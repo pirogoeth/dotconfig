@@ -23,6 +23,7 @@ packages:
   # utilities
   - name: blueshift
     aur: true
+  - name: cpupower
   - name: desktop-file-utils
   - name: dex
   - name: enpass-bin
