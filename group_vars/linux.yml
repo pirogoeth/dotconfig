@@ -11,24 +11,19 @@ binaries:
     path: ~/.bin/docker-compose
     hash: sha512:37df59f30a8c0a376bed069b7eec35fb1267f1eea245310198fe61c4f3bce44796e1d4dfd50d504fd81906d63a2736d3b9f96c21ca3d3268905254f60c930e26
 
-  - link: https://storage.googleapis.com/minikube/releases/v0.17.1/minikube-linux-amd64
+  - link: https://storage.googleapis.com/minikube/releases/v0.18.0/minikube-linux-amd64
     path: ~/.bin/minikube
-    hash: sha512:0fb0a7d1c572ef0c1030054ea7ccdd4e1ee970c80644673eeeb76109f367ecc5970b4bd0c89907522d908b384cdb08d55ac24924b7282dc6eb6b8eafe5064b4d
+    hash: sha256:212fbf52a6d601deb383271e2af756982f9b72715e1f7a3d65770d04387d8c8d
 
-  - link: https://storage.googleapis.com/kubernetes-release/release/v1.5.5/bin/linux/amd64/kubectl
+  - link: https://storage.googleapis.com/kubernetes-release/release/v1.6.2/bin/linux/amd64/kubectl
     path: ~/.bin/kubectl
-    hash: sha512:2dd24c7f8db3008884cee5c7994214258dc487929dde5ddaf0d0af39a0b19d20f2e53a4e448684b9dbbda5393335ae861f68101168f65310d8c2528d9fa8ffd3
+    hash: sha256:9beec3e8a9208da5cac479a164a61bf6a7b0b8716c338f866c4316680f0e9d98
 
-  - link: https://github.com/dhiltgen/docker-machine-kvm/releases/download/v0.8.2/docker-machine-driver-kvm
+  - link: https://github.com/dhiltgen/docker-machine-kvm/releases/download/v0.10.0/docker-machine-driver-kvm-ubuntu16.04
     path: ~/.bin/docker-machine-driver-kvm
-    hash: sha512:ad1d07c7821770fb937a3b3c78fcc9cf51dae0cd3c550769d26a7b110b8217bcd7575218ee4c389c01583756a2062f7e731c4eb5511fbc719c5707bba7c340ea
+    hash: md5:abc34ba69fbdc6c6aea3f59d99962310
 
   - link: https://github.com/grammarly/rocker/releases/download/1.3.0/rocker_linux_amd64.tar.gz
     path: ~/.bin/rocker.tgz
     extract: true
     hash: sha512:9ae5a091eb815438370c1ab18be478e60484375aae9ed67a84f8dd8adf0a3690e34d80d154bcc729c48b8b70b6528975bd18436b687282c3845ee29d7998a884
-
-  - link: https://api.bintray.com/content/habitat/stable/linux/x86_64/hab-%24latest-x86_64-linux.tar.gz?bt_package=hab-x86_64-linux
-    path: ~/.bin/habitat.tgz
-    extract: true
-    hash: sha512:23e732d5b7c5c5a2ef68ec361012c50d9ecd04c40e3c55a193231d5028348afbb0448f04a503fa5fac88d3bed053f4168e0d4135e50811aa281471fbd7faf1c6
