@@ -1,0 +1,22 @@
+# vim: set ts=2 sts=2 sw=2:
+
+---
+stages:
+  - lint
+  - spec
+
+ansible-lint:
+  image: pirogoeth/py3.5-ci:latest
+  stage: lint
+  script:
+    - apk add --update git libffi-dev openssl-dev
+    - pip install ansible
+    - extensions/update-galaxy.sh
+    - ansible-playbook --syntax-check -i inventory/hosts.txt site.yml
+
+test-kitchen:
+  image: containers.dev.maio.me/sjohnson/docker-test-kitchen/ansible-kitchen:latest
+  stage: spec
+  script:
+    - echo "not implemented"
+    - false

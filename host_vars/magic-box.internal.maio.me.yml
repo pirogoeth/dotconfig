@@ -21,6 +21,8 @@ system:
     primary: eDP1
 
 i3:
+  launcher: rofi -show run
+  dex_launcher: rofi -show drun
   workspace_count: 10
   bar:
     font: 'pango:Iosevka Light 12'
