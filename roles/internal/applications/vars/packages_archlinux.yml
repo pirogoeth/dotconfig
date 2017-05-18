@@ -17,6 +17,7 @@ packages:
     aur: true
 
   # security
+  - name: cinnamon-screensaver
   - name: pcsc-tools
   - name: pcsclite
 

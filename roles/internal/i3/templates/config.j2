@@ -120,8 +120,7 @@ bindsym $mod+Shift+m exec --no-startup-id "setxkbmap -option grp:switch,{{ xkb.m
 bindsym $meta+Shift+S exec --no-startup-id "echo -n '¯\_(ツ)_/¯' | xclip -i -selection clipboard"
 
 # lock screen
-set $lock_cmd "i3lock-wrapper -I 20 -e"
-exec --no-startup-id "xautolock -time 5 -locker 'i3lock-wrapper -I 20 -e' &"
+set $lock_cmd "cinnamon-screensaver-command --lock"
 bindsym $meta+l exec --no-startup-id $lock_cmd
 
 # other useful binds
