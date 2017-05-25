@@ -19,4 +19,4 @@ test-kitchen:
   stage: spec
   script:
     - echo "not implemented"
-    - false
+    - /bin/false
