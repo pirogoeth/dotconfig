@@ -11,7 +11,7 @@ ansible-lint:
   script:
     - apk add --update git libffi-dev openssl-dev
     - pip install ansible
-    - extensions/update-galaxy.sh
+    - bin/update-galaxy.sh
     - ansible-playbook --syntax-check -i inventory/hosts.txt site.yml
 
 test-kitchen:
