@@ -12,6 +12,7 @@ ansible-lint:
     - apk add --update git libffi-dev openssl-dev
     - pip install ansible
     - bin/update-galaxy.sh
+    - git submodule update --init --force --recursive --remote
     - ansible-playbook --syntax-check -i inventory/hosts.txt site.yml
 
 test-kitchen:
