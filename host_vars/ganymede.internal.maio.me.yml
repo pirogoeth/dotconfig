@@ -3,6 +3,7 @@
 ---
 
 X11:
+  resource_theme: pragmata
   xft:
     dpi: 96
 
@@ -20,8 +21,15 @@ system:
   display:
     primary: eDP1
 
+rofi:
+  font: 'Iosevka Term Slab Light 18'
+  theme: pragmata
+
 i3:
+  launcher: rofi -show run
+  dex_launcher: rofi -show drun
   workspace_count: 10
   bar:
+    command: 'python3 ~/.config/i3pystatus/config.py'
     font: 'pango:Iosevka Light 12'
     padding: '8px'

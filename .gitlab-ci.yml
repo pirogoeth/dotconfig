@@ -18,7 +18,7 @@ ansible-lint:
     - ansible-playbook --syntax-check -i inventory/hosts.txt site.yml
 
 test-kitchen:
-  image: containers.dev.maio.me:443/sjohnson/docker-test-kitchen/ansible-kitchen:latest
+  image: containers.dev.maio.me/sjohnson/docker-test-kitchen/ansible-kitchen:latest
   stage: spec
   script:
     - echo "not implemented"

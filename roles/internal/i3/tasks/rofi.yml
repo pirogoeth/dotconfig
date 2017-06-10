@@ -1,0 +1,11 @@
+---
+- name: create rofi configuration directory
+  file:
+    path="{{ lookup('env', 'HOME') }}/.config/rofi"
+    recurse=yes
+    state=directory
+
+- name: configure rofi from theme template
+  template:
+    src="rofi/{{ rofi.theme | default('pragmata') }}.j2"
+    dest="{{ lookup('env', 'HOME') }}/.config/rofi/config"

@@ -1,6 +1,6 @@
 ---
 - name: create Xresources file
   template:
-    src=xresources.j2
+    src="{{ X11.resource_theme | default('default') }}.j2"
     dest="{{ lookup('env', 'HOME') }}/.Xresources"
     validate="/usr/bin/env xrdb -merge %s"

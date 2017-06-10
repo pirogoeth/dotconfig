@@ -2,13 +2,13 @@
 ! {{ ansible_managed }}
 !
 
-Xft.dpi: {{ X11.xft.dpi | default(96) }}
-Xft.antialias: true
-Xft.hinting: true
-Xft.rgba: rgb
-Xft.autohint: false
-Xft.hintstyle: hintfull
-Xft.lcdfilter: lcddefault
+Xft.dpi:                        {{ X11.xft.dpi | default(96) }}
+Xft.antialias:                  {{ X11.xft.antialias | default('true') }}
+Xft.autohint:                   {{ X11.xft.autohint | default('true') }}
+Xft.hinting:                    {{ X11.xft.hinting | default('true') }}
+Xft.rgba:                       {{ X11.xft.rgba | default('rgb') }}
+Xft.hintstyle:                  {{ X11.xft.hintstyle | default('hintslight') }}
+Xft.lcdfilter:                  {{ X11.xft.lcdfilter | default('lcddefault') }}
 
 ! special
 *.foreground:   #f8f8f2
