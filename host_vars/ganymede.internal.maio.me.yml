@@ -30,6 +30,6 @@ i3:
   dex_launcher: rofi -show drun
   workspace_count: 10
   bar:
-    command: 'python3 ~/.config/i3pystatus/config.py'
+    status_command: 'python3 ~/.config/i3pystatus/config.py'
     font: 'pango:Iosevka Light 12'
     padding: '8px'

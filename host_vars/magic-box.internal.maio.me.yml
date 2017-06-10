@@ -30,6 +30,6 @@ i3:
   dex_launcher: rofi -show drun
   workspace_count: 10
   bar:
-    command: 'polybar ~/.config/polybar/config'
+    status_command: 'polybar ~/.config/polybar/config'
     font: 'pango:Iosevka Light 12'
     padding: '8px'
