@@ -79,8 +79,15 @@ font pango:monospace 8
 # X core fonts rendering does not support right-to-left and this being a bitmap
 # font, it doesn’t scale on retina/hidpi displays.
 
-# Run the XRandR screenlayout for multi-display.
-exec --no-startup-id "sh -c '{{ lookup('env', 'HOME') }}/.screenlayout/default.sh'"
+# Init execs
+{% for item in i3.exec | default([]) %}
+exec {%- if item.no_startup_id | default(false) %}--no-startup-id{%- endif %} "{{ item.cmd }}"
+{% endfor %}
+
+# Always execs
+{% for item in i3.exec_always | default([]) %}
+exec_always {%- if item.no_startup_id | default(false) %}--no-startup-id{%- endif %} "{{ item.cmd }}"
+{% endfor %}
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod

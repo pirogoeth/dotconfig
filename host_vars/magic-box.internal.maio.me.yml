@@ -26,6 +26,12 @@ rofi:
   theme: pragmata
 
 i3:
+  exec:
+    - cmd: "$HOME/.screenlayout/default.sh"
+      no_startup_id: true
+  exec_always:
+    - cmd: "$HOME/.config/polybar/launch.sh"
+      no_startup_id: true
   launcher: rofi -show run
   dex_launcher: rofi -show drun
   workspace_count: 10
