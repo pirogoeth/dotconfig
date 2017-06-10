@@ -81,12 +81,12 @@ font pango:monospace 8
 
 # Init execs
 {% for item in i3.exec | default([]) %}
-exec {%- if item.no_startup_id | default(false) %}--no-startup-id{%- endif %} "{{ item.cmd }}"
+exec {% if item.no_startup_id | default(false) %}--no-startup-id{% endif %} "{{ item.cmd }}"
 {% endfor %}
 
 # Always execs
 {% for item in i3.exec_always | default([]) %}
-exec_always {%- if item.no_startup_id | default(false) %}--no-startup-id{%- endif %} "{{ item.cmd }}"
+exec_always {% if item.no_startup_id | default(false) %}--no-startup-id{% endif %} "{{ item.cmd }}"
 {% endfor %}
 
 # Use Mouse+$mod to drag floating windows to their wanted position
