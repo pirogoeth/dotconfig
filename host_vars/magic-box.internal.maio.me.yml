@@ -35,6 +35,7 @@ i3:
   launcher: rofi -show run
   dex_launcher: rofi -show drun
   workspace_count: 10
+  map_workspaces_to_primary: false
   bar:
     enabled: false
     status_command: 'polybar ~/.config/polybar/config'

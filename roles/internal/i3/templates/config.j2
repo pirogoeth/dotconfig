@@ -204,10 +204,12 @@ bindsym $mod+Tab workspace back_and_forth
 bindsym $mod+Shift+{{ i }} move container to workspace $WS{{ i }}
 {% endfor %}
 
+{% if i3.map_workspaces_to_primary | default(true) %}
 # Mapping workspaces across multiple monitors
 {% for i in range(1, i3.workspace_count) %}
 workspace $WS{{ i }} output {{ system.display.primary }}
 {% endfor %}
+{% endif %}
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
