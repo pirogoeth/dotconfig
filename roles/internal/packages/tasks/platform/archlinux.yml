@@ -1,13 +1,13 @@
 ---
 
 - block:
-  - name: arch | install packages
+  - name: arch | reconcile packages
     pacman:
       name="{{ item.name }}"
       state="{{ item.state | default('latest') }}"
       force="{{ item.force | default('no') }}"
     become: true
-    when: "{{ not item.aur | default(False) }}"
+    when: "not item.aur | default(False)"
     with_items: "{{ packages }}"
 
   - name: arch-aur | install packages
@@ -15,5 +15,5 @@
       name="{{ item.name }}"
       user="{{ lookup('env', 'USER') }}"
       dir="{{ archlinux.aur.package_dir | default('/tmp') }}"
-    when: "{{ item.aur | default(False) }}"
+    when: "item.aur | default(False)"
     with_items: "{{ packages }}"

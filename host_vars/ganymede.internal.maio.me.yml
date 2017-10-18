@@ -21,18 +21,29 @@ system:
   display:
     primary: eDP1
 
-rofi:
-  font: 'Iosevka Term Slab Light 18'
-  theme: pragmata
-
 i3:
+  addons:
+    rofi:
+      font: 'Iosevka Term Slab Light 18'
+      theme: pragmata
+    polybar:
+      enabled: true
+      displays:
+        - name: eDP1
+          bar_height: 50
+          bar_width: 100%
   exec:
     - cmd: "$HOME/.screenlayout/default.sh"
+      no_startup_id: true
+  exec_always:
+    - cmd: "$HOME/.config/polybar/launch.sh"
       no_startup_id: true
   launcher: rofi -show run
   dex_launcher: rofi -show drun
   workspace_count: 10
+  map_workspaces_to_primary: false
   bar:
-    status_command: 'python3 ~/.config/i3pystatus/config.py'
+    enabled: false
+    status_command: 'polybar ~/.config/polybar/config'
     font: 'pango:Iosevka Light 12'
     padding: '8px'

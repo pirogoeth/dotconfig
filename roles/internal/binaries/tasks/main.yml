@@ -2,5 +2,5 @@
 
 - include: fetch-bin.yml binary={{ item }}
   tags: [binaries]
-  when: "{{ binaries is defined }}"
+  when: "binaries is defined"
   with_items: "{{ binaries }}"

@@ -8,7 +8,7 @@ X11:
     dpi: 160
 
 pulseaudio:
-  device: 0
+  device: 1
 
 xkb:
   map_toggle: 'grp:sclk_toggle'
@@ -16,16 +16,25 @@ xkb:
   variants: ',phoenetic_winkeys'
 
 system:
-  terminal_emulator: 'terminology'
+  terminal_emulator: '/sbin/termite'
   file_explorer: '/usr/bin/thunar'
   display:
     primary: eDP1
 
-rofi:
-  font: 'Iosevka Term Slab Light 18'
-  theme: pragmata
-
 i3:
+  addons:
+    rofi:
+      font: 'Iosevka Term Slab Light 18'
+      theme: pragmata
+    polybar:
+      enabled: true
+      displays:
+        - name: eDP1
+          bar_height: 50
+          bar_width: 100%
+        - name: HDMI3
+          bar_height: 50
+          bar_width: 100%
   exec:
     - cmd: "$HOME/.screenlayout/default.sh"
       no_startup_id: true

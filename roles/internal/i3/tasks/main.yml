@@ -1,3 +1,5 @@
 ---
 - include: configure.yml
 - include: rofi.yml
+- include: polybar/main.yml
+  when: i3.addons.polybar.enabled

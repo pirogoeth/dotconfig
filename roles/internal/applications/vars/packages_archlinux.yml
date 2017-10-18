@@ -2,6 +2,8 @@
 packages:
   # audio / video and web
   - name: chromium
+  - name: firefox-developer
+    aur: true
   - name: mpv
   - name: pavucontrol
   - name: playerctl
@@ -10,11 +12,11 @@ packages:
     aur: true
 
   # editors
+  - name: jetbrains-toolbox
   - name: neovim
   - name: python-neovim
   - name: python2-neovim
-  - name: atom-editor-bin
-    aur: true
+  - name: visual-studio-code
 
   # security
   - name: cinnamon-screensaver
@@ -32,15 +34,25 @@ packages:
     aur: true
   - name: exa-git
     aur: true
+  - name: fzf
   - name: imgurbash2
+    aur: true
+  - name: polybar
     aur: true
   - name: rofi
   - name: teiler-git
     aur: true
   - name: telegram-desktop-bin-dev
     aur: true
-  - name: the_silver_searcher
+  - name: termite
+  - name: termite-terminfo
+  - name: ripgrep
   - name: tmux-git
     aur: true
-  - name: vagrant
   - name: zeal
+
+  # tactical uninstalls
+  - name: atom-editor-bin
+    state: absent
+  - name: terminology
+    state: absent

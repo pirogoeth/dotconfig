@@ -1,0 +1,14 @@
+# vim: set ai et ts=2 sts=2 sw=2 syntax=ansible:
+
+---
+
+- set_fact: "display={{ display_item | default({}) }}"
+
+- name: addons | polybar | generate config for display
+  template:
+    src: polybar/config.j2
+    dest: "{{ lookup('env', 'HOME') }}/.config/polybar/config-{{ display.name }}"
+    mode: 0644
+    follow: yes
+    validate: polybar --config=%s --dump=monitor main
+  when: display.name is not none

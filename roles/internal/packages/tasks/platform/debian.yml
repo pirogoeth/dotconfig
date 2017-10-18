@@ -1,6 +1,6 @@
 ---
 - block:
-  - name: debian | install packages
+  - name: debian | reconcile packages
     apt:
       name="{{ item.name }}"
       default_release="{{ item.release | default('') }}"
@@ -9,4 +9,4 @@
       dpkg_options="{{ item.dpkg_opt | default('force-confdef,force-confold') }}"
     become: true
     with_items: "{{ packages }}"
-  when: "{{ packages is defined }}"
+  when: "packages is defined"
